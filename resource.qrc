@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="img">
+    <file>Resources/athena.jpg</file>
+    <file>Resources/epoclogo (002).png</file>
+  </qresource>
+</RCC>

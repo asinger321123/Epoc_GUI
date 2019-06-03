@@ -1,0 +1,2279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>681</width>
+    <height>751</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ewok</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#centralwidget {
+	
+	
+	background-image: url(:/img/Resources/athena.jpg);
+
+	
+	
+	
+	
+
+}</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QGroupBox" name="addOnGroupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+font-weight: bold
+background: rgb(248, 248, 255, 0);
+}
+
+
+QCheckBox {
+font-weight: bold
+background: rgb(248, 248, 255, 0);
+}</string>
+      </property>
+      <property name="title">
+       <string>BDA Add On Options</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="bdaOcc_line_edit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>134</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_22">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Drug List</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QCheckBox" name="deDup_check_box">
+         <property name="text">
+          <string>DeDup From SDA</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLineEdit" name="bdaNumLookUps_line_edit">
+         <property name="maximumSize">
+          <size>
+           <width>45</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>BDA Occupations</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_21">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>BDA Specialty(s)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QCheckBox" name="bdaOnly_checkBox">
+         <property name="text">
+          <string>BDA Only</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLineEdit" name="bdaTarget_lineEdit">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="bdaLookUps_line_edit">
+         <property name="maximumSize">
+          <size>
+           <width>45</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" rowspan="11">
+        <widget class="QPlainTextEdit" name="drugList_text_edit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPlainTextEdit {
+background-image: url(:/img/Resources/epoclogo (002).png);
+background-position: absolute;
+border: 2px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+font-weight: bold;
+color: rgb(242, 101, 34);
+
+
+
+
+
+	
+	
+	
+    
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="plainText">
+          <string/>
+         </property>
+         <property name="backgroundVisible">
+          <bool>false</bool>
+         </property>
+         <property name="centerOnScroll">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>BDA Target #</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_25">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>BDA Number of Lookups</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>BDA Lookup Period</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="bdaSpec_line_edit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>134</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QPushButton" name="AdditionalBDA_pushButton">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="addBDA_Label">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Additional BDA's: 0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="QCheckBox" name="therapyClass_checkBox">
+         <property name="text">
+          <string>Use Therapy Class</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QCheckBox" name="supressBDA_checkBox">
+         <property name="text">
+          <string>Suppress BDA Only</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="caseOptionGroupBox">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+border: 1.40px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255,70);
+margin-top: 0.5em;
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QCheckBox {
+color: black;
+background: rgb(248, 248, 255, 0);
+}
+</string>
+      </property>
+      <property name="title">
+       <string>Case Options</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="suppression_checkBox">
+         <property name="text">
+          <string>Supression Applied</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QCheckBox" name="standardMatch_check_box">
+         <property name="text">
+          <string>Standard Match</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="epocQuiz_check_box">
+         <property name="text">
+          <string>Epoc Quiz</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="previousSettings_check_box">
+         <property name="text">
+          <string>Use Previous Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QCheckBox" name="segBox_check_box">
+         <property name="text">
+          <string>Segment/DataSharing</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="Line" name="line_9">
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="docAlert_check_box">
+         <property name="text">
+          <string>DocAlert</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="Line" name="line_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="Line" name="line_11">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QCheckBox" name="exactMatch_check_box">
+         <property name="text">
+          <string>Exact Match</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QCheckBox" name="fuzzy_checkBox">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Fuzzy 3PT Match</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QCheckBox" name="sdaAddOn_check_box">
+         <property name="text">
+          <string>SDA Add On</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QCheckBox" name="bdaAddOn_check_box">
+         <property name="text">
+          <string>BDA Add On</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="Line" name="line_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="sdaAddON">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+
+color: black;
+background: rgb(248, 248, 255, 0);
+}</string>
+      </property>
+      <property name="title">
+       <string>SDA Add On Options</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>SDA Occupations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="sdaOcc_line_edit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>SDA Specialty(s)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="sdaSpec_line_edit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>SDA Target #</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="sdaTarget_lineEdit">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="sdaOnly_checkBox">
+         <property name="text">
+          <string>SDA Only</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="supressSDA_checkBox">
+         <property name="text">
+          <string>Suppress SDA Only</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="addSDA_Label">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Additional SDA's: 0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="AdditionalSDA_pushButton">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QGroupBox" name="segmentGroupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}
+
+QScrollBar:horizontal {
+background:rgb(88, 44, 131, 100);
+height:12px;
+}
+
+QScrollBar:vertical {
+background:rgb(88, 44, 131, 100);
+width:12px;
+}
+QPushButton::pressed {
+font-weight: bold;
+color: white;
+background:rgb(0, 147,178)
+}
+
+QListWidget {
+background: rgb(255,255,255,100);
+}</string>
+      </property>
+      <property name="title">
+       <string>Segmentation/DataSharing</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Source 
+Columns:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" rowspan="5">
+        <widget class="QListWidget" name="sourceSegs_list_widget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>125</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::DragDrop</enum>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::MoveAction</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="removeSegButton_push_btn">
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>7</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QPushButton" name="refreshButton">
+         <property name="font">
+          <font>
+           <pointsize>7</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Refresh</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="addSegButton_push_btn">
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>7</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2" rowspan="5">
+        <widget class="QListWidget" name="finalSegs_list_widget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>125</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::DragDrop</enum>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::MoveAction</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QPushButton" name="runProgramButton">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>7</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="statusTip">
+          <string>This Executes the Program</string>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Run</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Segmentation 
+DatasharingList:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="refreshLabel_QLabel">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>File Loaded</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="sheetCount_Label">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>12</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Sheet Count: </string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QCheckBox" name="pivotCheck_checkBox">
+         <property name="text">
+          <string>Pivot Table</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>sourceSegs_list_widget</zorder>
+      <zorder>label_3</zorder>
+      <zorder>label_2</zorder>
+      <zorder>finalSegs_list_widget</zorder>
+      <zorder>runProgramButton</zorder>
+      <zorder>refreshButton</zorder>
+      <zorder>addSegButton_push_btn</zorder>
+      <zorder>removeSegButton_push_btn</zorder>
+      <zorder>refreshLabel_QLabel</zorder>
+      <zorder>sheetCount_Label</zorder>
+      <zorder>pivotCheck_checkBox</zorder>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab:selected {
+
+background: rgb(88, 44, 131, 90) ;
+}
+QTabBar::Tab {
+border: 1.40px solid rgb(110, 110, 110, 200);
+border-radius: 5px;
+padding: 5px;
+}
+QTabWidget::pane { /* The tab widget frame */
+    border-top: 2px solid #C2C7CB;
+}
+
+QTabWidget::tab-bar {
+    left: 5px; /* move to the right by 5px */
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid #C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 8ex;
+    padding: 2px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}
+QTabWidget&gt;QWidget&gt;QWidget {
+background: rgb(88, 44, 131, 10);
+border: 1.40px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+}
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="listMatchTab">
+       <attribute name="title">
+        <string>List Match</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}</string>
+          </property>
+          <property name="title">
+           <string>Email Details</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="caseNumber_line_edit">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_32">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Postgres Table Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Sales Executive</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLineEdit" name="postgresTable_line_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLineEdit" name="emailTo_line_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLineEdit" name="saleExecutive_line_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QComboBox" name="emailMatchType_comboBox">
+             <item>
+              <property name="text">
+               <string/>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ME + 3PT Match</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ME Exact Match</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NPI Exact Match</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NPI + 3PT Match</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NPI + ME + 3PT Match</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NPI + ME Exact Match</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>3PT Fuzzy Match</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="Labelfdfd_2">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Match Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_33">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Case Number</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_31">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Email Recipient</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="tableLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="listMatchGroupBox">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}</string>
+          </property>
+          <property name="title">
+           <string>List Match Details</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="7" column="0">
+            <widget class="QLineEdit" name="requestInit_line_edit">
+             <property name="maximumSize">
+              <size>
+               <width>45</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Brand Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Manufacturer</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Your Initials</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLineEdit" name="myInit_line_edit">
+             <property name="maximumSize">
+              <size>
+               <width>45</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_35">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Requester's Initials</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="brandName_line_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLineEdit" name="presalesManuName_line_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLineEdit" name="suppFilePath_lineEdit"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Matched File</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="targetingTab">
+       <attribute name="title">
+        <string>Targeting</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+QComboBox {
+background-color: rgb(88, 44, 131, 10);
+border: 1.4px solid rgb(110, 110, 110, 70);
+}
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}</string>
+          </property>
+          <property name="title">
+           <string>Targeting Details</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="22" column="1">
+            <widget class="QCheckBox" name="cmi_compass_checkBox">
+             <property name="text">
+              <string>CMI/Compas</string>
+             </property>
+            </widget>
+           </item>
+           <item row="21" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Your Initials</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLineEdit" name="targetNumber_line_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_38">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Target Number(s)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="segmentList_checkBox">
+             <property name="text">
+              <string>Segmented List</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="brandName_line_edit_2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="label_15">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Brand Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="keepSeg_checkBox">
+             <property name="text">
+              <string>Keep Segment Variable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="22" column="0">
+            <widget class="QLineEdit" name="myInit_line_edit_2">
+             <property name="maximumSize">
+              <size>
+               <width>45</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_37">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Manufacturer</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QComboBox" name="targetManuName_comboBox">
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string/>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>AbbVie</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Alkermes</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>AMAG</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Amarin</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Amgen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Astellas</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>AstraZeneca</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Biogen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>BioProducts</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Boehringer</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Boston Scientific</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Celgene</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Clovis</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Collegium</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Daiichi</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Genentech</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gilead</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>GSK</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Ipsen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Janssen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Lilly</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mannkind</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Medicure</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Merck</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Novartis</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NovoNordisk</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Otsuka</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Pfizer</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Portola</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sanofi-Aventis</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sunovion</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Supernus</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Takeda</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Valeant</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Veracyte</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Verastem</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ViiV</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Seg Variable Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Seg List Values</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLineEdit" name="segVariable_lineEdit"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLineEdit" name="segValues_lineEdit"/>
+           </item>
+           <item row="10" column="0">
+            <widget class="QCheckBox" name="backFill_checkBox">
+             <property name="text">
+              <string>BackFill Last Segment</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QToolButton" name="dateButton">
+             <property name="text">
+              <string>+</string>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonIconOnly</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="date_lineEdit"/>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>TARGETS Date Folder</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLabel" name="targetTableName">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="dataCap_lineEdit"/>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLineEdit" name="postgresTable_line_edit_2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLabel" name="label_36">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Postgres Table Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>Data Cap</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Edit List</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QListWidget {
+Background: rgb(248, 248, 255, 70);
+}
+
+QPushButton::pressed {
+font-weight: bold;
+color: white;
+background:rgb(0, 147,178)
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}
+
+QScrollBar:horizontal {
+background:rgb(88, 44, 131, 100);
+height:12px;
+}
+
+QScrollBar:vertical {
+background:rgb(88, 44, 131, 100);
+width:12px;
+}</string>
+          </property>
+          <property name="title">
+           <string>Concat Editor</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>Concatenated Preview</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="concatList_listWidget">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>140</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QListWidget {
+Background: rgb(248, 248, 255, 150);
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="concat_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>75</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>CONCAT</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QPushButton::pressed {
+font-weight: bold;
+color: white;
+background:rgb(0, 147,178)
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}</string>
+          </property>
+          <property name="title">
+           <string>Column Editor</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Rename Column</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Add Column</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="addColumn_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>ADD</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="newColumnEdit_lineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>80</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLineEdit" name="addColumn_lineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>80</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Delete Column</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="deleteColumn_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="renameColumn_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Rename</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+font-weight: bold;
+border: 1.4px solid rgb(110, 110, 110, 200);
+border-radius: 6px;
+background: rgb(248, 248, 255, 70);
+margin-top: 0.5em;
+}
+
+QListWidget {
+Background: rgb(248, 248, 255, 150);
+}
+
+QGroupBox::title {
+top: -5px;
+left: 15px
+}
+
+QLabel {
+background: rgb(248, 248, 255, 0);
+}
+
+QCheckBox {
+background: rgb(248, 248, 255, 0);
+}
+
+QScrollBar:horizontal {
+background:rgb(88, 44, 131, 100);
+height:12px;
+}
+
+QPushButton::pressed {
+font-weight: bold;
+color: white;
+background:rgb(0, 147,178)
+}
+
+QScrollBar:vertical {
+background:rgb(88, 44, 131, 100);
+width:12px;
+}</string>
+          </property>
+          <property name="title">
+           <string>Column Value Editor</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="4" column="0" colspan="3">
+            <widget class="QLineEdit" name="renameValue_lineEdit">
+             <property name="maximumSize">
+              <size>
+               <width>125</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Segment Values</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Rename Value</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Creates Filter based on
+ Selected Values</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="itemCount_QLabel">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Count:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QListWidget" name="uniqueValues_listWidget">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="dragDropMode">
+              <enum>QAbstractItemView::InternalMove</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QPushButton" name="renameButton_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Fix</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="getUniqueValues_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>65</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Get  Values</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QPushButton" name="createFilter_pushButton">
+             <property name="text">
+              <string>Create Filter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QPushButton" name="resetEditTab_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+       <zorder>groupBox_5</zorder>
+       <zorder>groupBox_4</zorder>
+       <zorder>groupBox_3</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>OBIEE LookUp</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QTableView" name="target_tableView">
+          <property name="styleSheet">
+           <string notr="true">QHeaderView::section {
+background: purple;
+font-weight: bold;
+}
+
+QHeaderView::section:horizontal
+{
+border-style: none;    
+border-top: 1px solid #fffff8;
+}
+
+QHeaderView::section:vertical
+{
+border-style: none;    
+border-left: 1px solid #fffff8;
+}
+
+QTableView::item {
+border-style: none;
+border-left: 2px solid black; 
+border-top: 2px solid black; 
+} 
+QTableView{
+border-style: none;
+border-bottom: 2px solid black; 
+border-right: 2px solid black; 
+}
+
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>681</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_List"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionChange_Log">
+   <property name="text">
+    <string>Change Log</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionLoad_List">
+   <property name="text">
+    <string>Load List</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>previousSettings_check_box</tabstop>
+  <tabstop>docAlert_check_box</tabstop>
+  <tabstop>epocQuiz_check_box</tabstop>
+  <tabstop>standardMatch_check_box</tabstop>
+  <tabstop>exactMatch_check_box</tabstop>
+  <tabstop>segBox_check_box</tabstop>
+  <tabstop>sdaAddOn_check_box</tabstop>
+  <tabstop>bdaAddOn_check_box</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>sdaOcc_line_edit</tabstop>
+  <tabstop>sdaSpec_line_edit</tabstop>
+  <tabstop>sdaTarget_lineEdit</tabstop>
+  <tabstop>bdaOcc_line_edit</tabstop>
+  <tabstop>bdaSpec_line_edit</tabstop>
+  <tabstop>bdaLookUps_line_edit</tabstop>
+  <tabstop>bdaNumLookUps_line_edit</tabstop>
+  <tabstop>bdaTarget_lineEdit</tabstop>
+  <tabstop>deDup_check_box</tabstop>
+  <tabstop>drugList_text_edit</tabstop>
+  <tabstop>caseNumber_line_edit</tabstop>
+  <tabstop>saleExecutive_line_edit</tabstop>
+  <tabstop>postgresTable_line_edit</tabstop>
+  <tabstop>emailMatchType_comboBox</tabstop>
+  <tabstop>emailTo_line_edit</tabstop>
+  <tabstop>brandName_line_edit</tabstop>
+  <tabstop>presalesManuName_line_edit</tabstop>
+  <tabstop>myInit_line_edit</tabstop>
+  <tabstop>requestInit_line_edit</tabstop>
+  <tabstop>sourceSegs_list_widget</tabstop>
+  <tabstop>finalSegs_list_widget</tabstop>
+  <tabstop>addSegButton_push_btn</tabstop>
+  <tabstop>removeSegButton_push_btn</tabstop>
+  <tabstop>segmentList_checkBox</tabstop>
+  <tabstop>keepSeg_checkBox</tabstop>
+  <tabstop>targetManuName_comboBox</tabstop>
+  <tabstop>brandName_line_edit_2</tabstop>
+  <tabstop>targetNumber_line_edit</tabstop>
+  <tabstop>myInit_line_edit_2</tabstop>
+  <tabstop>uniqueValues_listWidget</tabstop>
+  <tabstop>renameValue_lineEdit</tabstop>
+  <tabstop>getUniqueValues_pushButton</tabstop>
+  <tabstop>newColumnEdit_lineEdit</tabstop>
+  <tabstop>renameColumn_pushButton</tabstop>
+  <tabstop>refreshButton</tabstop>
+  <tabstop>runProgramButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
