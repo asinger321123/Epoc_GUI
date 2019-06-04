@@ -761,7 +761,7 @@ def postgresConn():
 
 	elif caseType == 'Targeting' and listMatchType =='Standard' and dSharing == 'N' and foundFullName == 'y':
 
-		export = """{select}, {seg} from {tableName};""".format(select=selectFullName, tableName=tableName, seg=splitList)
+		export = """{select} from {tableName};""".format(select=selectFullName, tableName=tableName)
 		pandas.read_sql_query(export, conn).to_csv(os.path.join(downloads, 'target.txt'), index=False, sep='\t')
 
 	elif caseType == 'Targeting' and listMatchType =='Exact' and dSharing == 'N' and config['segmentListChecked'] == 'n':
