@@ -39,8 +39,6 @@ strList = ['MD', 'DO', 'Allergy and Immunology', 'Anesthesiology', 'Cardiology',
 downloadFilesDirectory = [f for f in listdir(downloads) if isfile(join(downloads, f))]
 downloadFilesDirectory.sort(key=lambda x: os.stat(os.path.join(downloads, x)).st_mtime, reverse=True)
 
-print 'test5'
-
 qtCreatorFile = os.path.join(desktop, 'Ewok','new_andrew3.ui') # Enter file here.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
