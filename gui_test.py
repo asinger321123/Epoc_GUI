@@ -890,11 +890,6 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         isPivotChecked = self.pivotTableCheck.isChecked()
         self.finalSegments = ""
         if isPivotChecked:
-            # for i in xrange(self.finalSegs.count()):
-            #     self.finalSegments = str(self.finalSegs.item(i).text())
-            #     print self.finalSegments
-            # if self.finalSegments == "": 
-            # print len(self.finalSegs)
             if len(self.finalSegs) == 0:
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Warning)
@@ -2126,19 +2121,15 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
             if self.standardMatch.isChecked() and isSegmentChecked:
                 self.config['listMatchType'] = 'Standard_Seg'
                 self.config['finalSegs'] = list()
-                if not self.cmiCompass.isChecked():
-                    for i in range(self.finalSegs.count()):
-                        self.config['finalSegs'].append(str(self.finalSegs.item(i).text()))
-                else:
-                    self.config['finalSegs'] = []
+                for i in range(self.finalSegs.count()):
+                    self.config['finalSegs'].append(str(self.finalSegs.item(i).text()))
             if self.exactMatch.isChecked() and isSegmentChecked:
                 self.config['listMatchType'] = 'Exact_Seg'
                 self.config['finalSegs'] = list()
-                if not self.cmiCompass.isChecked():
-                    for i in range(self.finalSegs.count()):
-                        self.config['finalSegs'].append(str(self.finalSegs.item(i).text()))
-                else:
-                    self.config['finalSegs'] = []
+                for i in range(self.finalSegs.count()):
+                    self.config['finalSegs'].append(str(self.finalSegs.item(i).text()))
+            if not isSegmentChecked:
+                self.config['finalSegs'] = []
             if self.deDup.isChecked():
                 self.config['deDup'] = str('Yes')
             if not isDedupChecked:
